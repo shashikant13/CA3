@@ -10,6 +10,7 @@
 </head>
 
 <body>
+<div>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <section class="top-nav">
     <div>
@@ -27,6 +28,7 @@
       <li><a href="#ide">IDE</a></li>
     </ul>
   </section>
+</div>
   <div id="about">
     <h1>About Me</h1>
     <div class="intro">
@@ -123,13 +125,18 @@
           }
         }
         ans.sort((a, b) => a - b);
-        return ans;
+        let str="";
+        for (var i = 0; i <ans.length; i++) 
+        {
+        str+=ans[i]+" ";
+        }
+        return str;
       }
 
       const btn = document.getElementById("_mybtn");
       btn.addEventListener("click", () => {
         const inputVal = document.getElementById("_myinput").value;
-        let separatedValArr = inputVal.split(",").map(Number);
+        let separatedValArr = inputVal.split(" ").map(Number);
         document.getElementById("_myoutput").innerHTML = divisibilityCheck(separatedValArr);
       });
     </script>
