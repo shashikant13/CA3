@@ -125,12 +125,14 @@
           }
         }
         ans.sort((a, b) => a - b);
-        let str="";
+        let str="Enter the valid INPUT";
+        let str1="";
         for (var i = 0; i <ans.length; i++) 
         {
-        str+=ans[i]+" ";
+        str1+=ans[i]+" ";
         }
-        return str;
+        if(ans.length==0) return str;
+        return str1;
       }
 
       const btn = document.getElementById("_mybtn");
